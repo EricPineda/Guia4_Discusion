@@ -6,14 +6,14 @@ export default function Result(props) {
         <View style={styles.content}>
             {total && (
                 <View style={styles.boxResult}>
-                    <Text style={styles.title}>RESUMEN DE SUELDO</Text>
-                    <DataResult title="Nombre:" value={`${nombre} `} />
-                    <DataResult title="Sueldo base:" value={`${sueldo} $`} />
-                    <DataResult title="AFP (4%):" value={`${total.AFPFee} $`} />
-                    <DataResult title="ISSS (3%):" value={`${total.ISSSFee} $`} />
-                    <DataResult title="RENTA (5%):" value={`${total.RENTAFee} $`} />
+                    <Text style={styles.title}>RESULTADOS</Text>
+                    <DataResult title="Nombre: " value={`${nombre} `} />
+                    <DataResult title="Sueldo base: " value={`$ ${sueldo} `} />
+                    <DataResult title="AFP (4%): " value={`$ ${total.AFPFee} `} />
+                    <DataResult title="ISSS (3%): " value={`$ ${total.ISSSFee} `} />
+                    <DataResult title="RENTA (5%): " value={`$ ${total.RENTAFee} `} />
                     <Text style={styles.linea}></Text>
-                    <DataResult title="Sueldo neto:" value={`${total.SueldoNeto} $`} />
+                    <DataResult title="Sueldo neto: " value={`$ ${total.SueldoNeto} `} />
 
 
                 </View>
@@ -36,10 +36,12 @@ function DataResult(props) {
 const styles = StyleSheet.create({
     content: {
         marginHorizontal: 40,
-        height:500,
+       height:500,
+      overflow: 'scroll',
     },
     boxResult: {
         padding: 30,
+        overflow: 'scroll',
     },
     title: {
         fontSize: 25,

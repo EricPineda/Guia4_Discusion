@@ -8,7 +8,7 @@ export default function Form(props) {
         <View style={styles.viewForm}>
             <View style={styles.viewInputs}>
                 <TextInput
-                    placeholder="Nombre"
+                    placeholder="Ingrese el nombre:"
                     keyboardType="default"
                     style={styles.input}
                     onChange={(e) => setNombre(e.nativeEvent.text)}
@@ -16,7 +16,7 @@ export default function Form(props) {
 
             </View>
             <TextInput
-                placeholder="Sueldo base"
+                placeholder="Ingrese el sueldo base:"
                 keyboardType="decimal-pad"
                 style={[styles.input, styles.inputPercentage]}
                 onChange={(e) => setSueldo(e.nativeEvent.text)}
