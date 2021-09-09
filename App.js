@@ -26,12 +26,16 @@ export default function App() {
   const calculate = () => {
     reset();
     if (!nombre.trim()) {
-      setErrorMessage('Añade el nombre ');
+      setErrorMessage('Falta añadir el nombre.');
     } else if (!sueldo.trim()) {
-      setErrorMessage('Añade el sueldo base');
-    } else if (sueldo <= 0) {
+      setErrorMessage('Falta añadir el sueldo.');
+    } else if (isNaN(sueldo)) {
+      
+      setErrorMessage('El sueldo es un valor numérico.');
+    } else if (sueldo <= 0){
       setErrorMessage('El sueldo debe ser mayor a 0');
-    } else {
+
+    }else {
 
       const AFP = sueldo * 0.04;
       const ISSS = sueldo * 0.03;
